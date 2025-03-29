@@ -1,6 +1,9 @@
 import Fastify from "fastify";
+import { client } from "./db/db.js";
 
 const app = Fastify({ logger: false });
+
+await client.connect();
 
 app.get("/", async () => {
   return { hello: "world" };
