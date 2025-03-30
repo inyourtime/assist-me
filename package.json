@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx --env-file=.env --watch src/index.ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "lint": "eslint --ignore-pattern=dist",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.13",
+    "eslint": "^9.23.0",
+    "neostandard": "^0.12.1",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2"
   },
